@@ -29,7 +29,9 @@
     <!-- Statut Column -->
     <ng-container matColumnDef="statut">
         <th mat-header-cell *matHeaderCellDef> STATUT </th>
-        <td mat-cell *matCellDef="let element"> {{element.statut}} </td>
+        <td mat-cell *matCellDef="let element">
+            <button (click)="statut(element)">Bloquer</button>
+        </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
