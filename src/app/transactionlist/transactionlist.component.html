@@ -1,0 +1,52 @@
+<div class="container" style="margin-top:50px">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Liste de Transactions</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover " style="width:200px;">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">User_id</th>
+                                    <th scope="col">NomEnvoi</th>
+                                    <th scope="col">PrenomEnvoi</th>
+                                    <th scope="col">TelephoneEnvoi</th>
+                                    <th scope="col">CNIEnvoi</th>
+                                    <th scope="col">DateEnvoi</th>
+                                    <th scope="col">NomRetrait</th>
+                                    <th scope="col">CodeEnvoi</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let transaction of transactions">
+                                    <td>{{transaction.id}}</td>
+                                    <td>{{transaction.user_id}}</td>
+                                    <td>{{transaction.nomenvoi}}</td>
+                                    <td>{{transaction.prenomenvoi}}</td>
+                                    <td>{{transaction.telephoneenvoi}}</td>
+                                    <td>{{transaction.cnienvoi}}</td>
+                                    <td>{{transaction.dateenvoi}}</td>
+                                    <td>{{transaction.nomretrai}}</td>
+                                    <td>{{transaction.codeenvoi}}</td>
+                                    <td>{{transaction.montantenvoi}}</td>
+                                    <td>{{transaction.commission_envoi}}</td>
+                                    <td>{{transaction.commission_retrai}}</td>
+                                    <td>{{transaction.commission_etat}}</td>
+                                    <td>{{transaction.commission_admin}}</td>
+                                    <td>{{transaction.nomretrai}}</td>
+                                    <td>{{transaction.dateretrai}}</td>
+                                    <td>{{transaction.telephoneretrai}}</td>
+                                    <td>{{transaction.statut}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

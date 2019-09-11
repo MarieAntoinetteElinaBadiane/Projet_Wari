@@ -1,0 +1,27 @@
+<div class="page login-page">
+    <div class="container">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header d-flex align-items-center">
+
+                    <img width="250" src="/assets/images/brillant-bleu-login-ball-icone-web-sur-fond-blanc-rendu-3d-ronde-bouton-j9f2eh.jpg" alt="Login" style="position:relative;left:90px">
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input [(ngModel)]="loginUserData.username" type="text" name="username" placeholder="Username" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input [(ngModel)]="loginUserData.password" type="password" name="password" placeholder="Password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input (click)="loginUser()" type="submit" value="Connexion" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
