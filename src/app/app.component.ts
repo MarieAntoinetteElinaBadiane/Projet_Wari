@@ -21,16 +21,16 @@ export class AppComponent {
 //   }
 
   isSuperAdmin() {
-    return this.authService.rol();
+    return this.authService.isSuperAdmin();
   }
   isAdmin() {
-    return this.authService.rol();
+    return this.authService.isAdmin();
   }
-//   isUser() {
-//     return this.authService.isUser();
-//   }
   isCaissier() {
-    return this.authService.rol();
+    return this.authService.isCaissier();
+  }
+  isUser() {
+    return this.authService.isUser();
   }
   isAuthenticated() {
      return this.authService.rol();

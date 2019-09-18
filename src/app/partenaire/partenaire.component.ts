@@ -17,6 +17,9 @@ export class PartenaireComponent implements OnInit {
 
  ngOnInit() {
  }
+ telechargement() {
+  this.router.navigate(['/contract']);
+ }
  handleFileInput(file: FileList) {
    this. partUserData.imageFile = file.item(0);
    const reader = new FileReader();

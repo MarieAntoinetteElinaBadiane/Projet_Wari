@@ -23,6 +23,9 @@ import { AjoutService } from './services/ajout.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { TransactionlistComponent } from './transactionlist/transactionlist.component';
+import { DepotlistComponent } from './depotlist/depotlist.component';
+import { ComptelistComponent } from './comptelist/comptelist.component';
+import { ContractComponent } from './contract/contract.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { TransactionlistComponent } from './transactionlist/transactionlist.comp
     PartenaireComponent,
     ListerComponent,
     ListComponent,
-    TransactionlistComponent
+    TransactionlistComponent,
+    DepotlistComponent,
+    ComptelistComponent,
+    ContractComponent
   ],
   imports: [
     BrowserModule,

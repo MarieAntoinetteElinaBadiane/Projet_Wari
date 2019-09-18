@@ -11,7 +11,6 @@
                             <thead class="table-primary">
                                 <tr>
                                     <th scope="col">Id</th>
-                                    <th scope="col">User_id</th>
                                     <th scope="col">NomEnvoi</th>
                                     <th scope="col">PrenomEnvoi</th>
                                     <th scope="col">TelephoneEnvoi</th>
@@ -20,12 +19,9 @@
                                     <th scope="col">NomRetrait</th>
                                     <th scope="col">CodeEnvoi</th>
                                     <th scope="col">MontantEnvoi</th>
-                                    <th scope="col">Commission_Envoi</th>
-                                    <th scope="col">Commission_Retrait</th>
-                                    <th scope="col">Commission_Admin</th>
-                                    <th scope="col">Commission_Etat</th>
                                     <th scope="col">Nom_Retrait</th>
                                     <th scope="col">Date_Retrait</th>
+                                    <th scope="col">CNIRetrait</th>
                                     <th scope="col">Telephone_Retrait</th>
                                     <th scope="col">Statut</th>
 
@@ -34,21 +30,17 @@
                             <tbody>
                                 <tr *ngFor="let transaction of transactions">
                                     <td>{{transaction.id}}</td>
-                                    <td>{{transaction.user_id}}</td>
                                     <td>{{transaction.nomenvoi}}</td>
                                     <td>{{transaction.prenomenvoi}}</td>
                                     <td>{{transaction.telephoneenvoi}}</td>
-                                    <td>{{transaction.cnienvoi}}</td>
+                                    <td>{{transaction.CNIenvoi}}</td>
                                     <td>{{transaction.dateenvoi}}</td>
                                     <td>{{transaction.nomretrai}}</td>
                                     <td>{{transaction.codeenvoi}}</td>
                                     <td>{{transaction.montantenvoi}}</td>
-                                    <td>{{transaction.commission_envoi}}</td>
-                                    <td>{{transaction.commission_retrai}}</td>
-                                    <td>{{transaction.commission_etat}}</td>
-                                    <td>{{transaction.commission_admin}}</td>
                                     <td>{{transaction.nomretrai}}</td>
                                     <td>{{transaction.dateretrai}}</td>
+                                    <td>{{transaction.CNIretrai}}</td>
                                     <td>{{transaction.telephoneretrai}}</td>
                                     <td>{{transaction.statut}}</td>
                                 </tr>

@@ -28,7 +28,6 @@ export class ListComponent implements OnInit {
     users = [];
     dataSource: any;
       ngOnInit() {
-
     this.ajout.getuser()
     .subscribe(
     res => {
@@ -41,11 +40,29 @@ export class ListComponent implements OnInit {
     err => console.log(err)
     );
 }
+
 // tslint:disable-next-line:member-ordering
-displayedColumns: string[] = ['id', 'partenaire_id', 'compte_id', 'username', 'roles', 'nom', 'prenom', 'statut'];
+displayedColumns: string[] = ['id', 'username', 'roles', 'nom', 'prenom', 'statut'];
 //  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
 applyFilter(filterValue: string) {
   this.dataSource.filter = filterValue.trim().toLowerCase();
 }
+bloquer(donner){
+  console.log(donner);
+username=null;
+ }
+OnSubmit(username)
+  {
+    this.bloquer.username=username;
+    this.ajoutService.OnSubmit(this.bloquer) .subscribe(
+      res=>{
+        this.ngOnInit();
+        console.log(res)
+      },
+      err=>{
+        console.log(err)
+      })
+  }
 }
+

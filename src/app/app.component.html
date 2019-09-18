@@ -52,6 +52,17 @@
                             <a routerLink="/depot" routerLinkActive="active"><i class="icon-grid"></i>Depot</a>
                         </li>
                         <li>
+                            <a routerLink="/depotlist" routerLinkActive="active"><i class="icon-grid"></i>Liste des Depots</a>
+                        </li>
+                        <li>
+                            <a routerLink="/comptelist" routerLinkActive="active"><i class="icon-grid"></i>Liste des Comptes</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="admin-menu" *ngIf="isUser()">
+                    <h5 class="sidenav-heading">User</h5>
+                    <ul id="side-admin-menu" class="side-menu list-unstyled">
+                        <li>
                             <a routerLink="/retrait" routerLinkActive="active"><i class="icon-interface-windows"></i>Retrait</a>
                         </li>
                         <li>
@@ -84,7 +95,7 @@
                                 <a (click)="deco()" routerLink="/login" routerLinkActive="active" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a>
                             </li>
                             <li>
-                                <a routerLink="/login" routerLinkActive="active" class="nav-link login"><span class="d-none d-sm-inline-block">Login</span><i class="fa fa-sign-in"></i></a>
+                                <a (click)="connect()" routerLink="/login" routerLinkActive="active" class="nav-link login"><span class="d-none d-sm-inline-block">Login</span><i class="fa fa-sign-in"></i></a>
                             </li>
                         </ul>
                     </div>

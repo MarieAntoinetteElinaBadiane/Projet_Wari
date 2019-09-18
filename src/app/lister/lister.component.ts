@@ -37,11 +37,13 @@ export class ListerComponent implements OnInit {
     );
     }
     // tslint:disable-next-line:member-ordering
-    displayedColumns: string[] = ['id', 'ninea', 'adresse', 'raison_sociale', 'statut'];
+    displayedColumns: string[] = ['id', 'ninea', 'adresse', 'statut'];
   //  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
+  bloquer(donner){
+   console.log(donner);
+  }
 }

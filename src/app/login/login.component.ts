@@ -29,6 +29,7 @@ this.auth.loginUser(this.loginUserData)
   res => {
     console.log(this.loginUserData);
     // console.log(res);
+    if ( res.token) {
     localStorage.setItem('token', res.token);
     const decodedToken = this.helper.decodeToken(res.token);
     console.log(decodedToken);
@@ -37,16 +38,19 @@ this.auth.loginUser(this.loginUserData)
     localStorage.setItem('expiration', decodedToken.exp);
     console.log(localStorage);
 
-     this.rol(decodedToken.roles[0]);
+    this.rol(decodedToken.roles[0]);
 
     this.router.navigate(['/']);
-  },
-  err => console.log(err)
+  } else {
+    console.log(res);
+  }
+},
+    err => console.log(err)
   );
 
 }
   rol(arg0: any) {
-    throw new Error("Method not implemented.");
+    throw new Error('Method not implemented.');
   }
 
 // isSuperAdmin() {

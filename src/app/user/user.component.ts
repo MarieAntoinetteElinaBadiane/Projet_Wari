@@ -29,7 +29,7 @@ export class UserComponent implements OnInit {
       .subscribe(
            res => {
       console.log(res);
-      this.router.navigate(['/compte']);
+      this.router.navigate(['/user']);
 
         },
         err => console.log(err)
